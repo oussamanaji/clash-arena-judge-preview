@@ -33,9 +33,8 @@ export default function Home() {
             height={80}
             className="mx-auto mb-4"
           />
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">Clash Arena</h1>
-          <p className="text-lg font-semibold text-indigo-600 mb-1">Early Access</p>
-          <p className="text-gray-600">Event Special</p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2">Rhitoric Clash Arena</h1>
+          <p className="text-lg font-semibold text-indigo-600 mb-1">AI Judge Early Access</p>
         </div>
 
         {/* Nickname Input */}
