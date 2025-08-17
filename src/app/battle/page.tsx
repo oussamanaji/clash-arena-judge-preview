@@ -57,7 +57,6 @@ export default function Battle() {
   }
 
   const handleRecordingComplete = async (blob: Blob) => {
-    setAudioBlob(blob)
     setPhase('judge')
     
     try {
