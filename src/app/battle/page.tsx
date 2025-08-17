@@ -7,7 +7,7 @@ import AudioRecorder from '@/components/AudioRecorder'
 import MotionCard from '@/components/MotionCard'
 import RoleCard from '@/components/RoleCard'
 import JudgmentCard from '@/components/JudgmentCard'
-import { judgeDebate } from '@/lib/ai-judge'
+import { judgeDebate, JudgmentResult } from '@/lib/ai-judge'
 
 // Mock motions data (KISS principle)
 const MOTIONS = [
@@ -32,8 +32,7 @@ export default function Battle() {
   const [motion, setMotion] = useState('')
   const [role, setRole] = useState<'PROP' | 'OPP'>('PROP')
   const [nickname, setNickname] = useState('')
-  const [audioBlob, setAudioBlob] = useState<Blob | null>(null)
-  const [judgment, setJudgment] = useState<any>(null)
+  const [judgment, setJudgment] = useState<JudgmentResult | null>(null)
   const router = useRouter()
 
   useEffect(() => {

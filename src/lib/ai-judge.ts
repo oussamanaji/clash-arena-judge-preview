@@ -3,7 +3,7 @@
 
 import OpenAI from 'openai'
 
-interface JudgmentResult {
+export interface JudgmentResult {
   score: number
   feedback: string
   scores: {

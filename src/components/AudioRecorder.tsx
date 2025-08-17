@@ -31,6 +31,7 @@ export default function AudioRecorder({
       stopRecording()
       cleanupAudio()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const checkPermission = async () => {
@@ -38,7 +39,7 @@ export default function AudioRecorder({
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
       setHasPermission(true)
       stream.getTracks().forEach(track => track.stop()) // Stop the test stream
-    } catch (error) {
+    } catch {
       setHasPermission(false)
       onPermissionDenied?.()
     }
@@ -49,7 +50,7 @@ export default function AudioRecorder({
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
       setHasPermission(true)
       stream.getTracks().forEach(track => track.stop())
-    } catch (error) {
+    } catch {
       setHasPermission(false)
       onPermissionDenied?.()
     }

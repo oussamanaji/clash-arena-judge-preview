@@ -6,10 +6,9 @@ interface TimerProps {
   initialSeconds: number
   onComplete?: () => void
   title?: string
-  color?: 'blue' | 'red' | 'green' | 'orange'
 }
 
-export default function Timer({ initialSeconds, onComplete, title, color = 'blue' }: TimerProps) {
+export default function Timer({ initialSeconds, onComplete, title }: TimerProps) {
   const [seconds, setSeconds] = useState(initialSeconds)
   const [isActive, setIsActive] = useState(true)
 

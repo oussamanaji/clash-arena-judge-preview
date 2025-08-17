@@ -6,11 +6,10 @@ interface JudgmentCardProps {
     delivery: number
     structure: number
   }
-  transcript?: string
   onContinue?: () => void
 }
 
-export default function JudgmentCard({ score, feedback, scores, transcript, onContinue }: JudgmentCardProps) {
+export default function JudgmentCard({ score, feedback, scores, onContinue }: JudgmentCardProps) {
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600'
     if (score >= 60) return 'text-yellow-600'
@@ -74,7 +73,7 @@ export default function JudgmentCard({ score, feedback, scores, transcript, onCo
 
       {/* Feedback */}
       <div className="bg-gray-50 rounded-xl p-6 mb-8">
-        <h3 className="font-semibold text-gray-800 mb-6">Judge's Feedback</h3>
+        <h3 className="font-semibold text-gray-800 mb-6">Judge&apos;s Feedback</h3>
         
         <div className="space-y-6">
           {sections.whatWentWell && (
