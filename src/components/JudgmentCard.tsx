@@ -24,10 +24,10 @@ export default function JudgmentCard({ score, feedback, scores, onContinue }: Ju
 
   const formatFeedback = (feedback: string) => {
     const sections = {
-      whatWentWell: feedback.match(/WHAT YOU DID WELL:(.*?)MAIN AREA/s)?.[1]?.trim() || '',
-      mainImprovement: feedback.match(/MAIN AREA TO IMPROVE:(.*?)PRACTICE EXERCISE/s)?.[1]?.trim() || '',
-      practiceExercise: feedback.match(/PRACTICE EXERCISE:(.*?)ENCOURAGEMENT/s)?.[1]?.trim() || '',
-      encouragement: feedback.match(/ENCOURAGEMENT:(.*?)$/s)?.[1]?.trim() || ''
+      whatWentWell: feedback.match(/WHAT YOU DID WELL:([\s\S]*?)MAIN AREA/)?.[1]?.trim() || '',
+      mainImprovement: feedback.match(/MAIN AREA TO IMPROVE:([\s\S]*?)PRACTICE EXERCISE/)?.[1]?.trim() || '',
+      practiceExercise: feedback.match(/PRACTICE EXERCISE:([\s\S]*?)ENCOURAGEMENT/)?.[1]?.trim() || '',
+      encouragement: feedback.match(/ENCOURAGEMENT:([\s\S]*?)$/)?.[1]?.trim() || ''
     }
     return sections
   }
